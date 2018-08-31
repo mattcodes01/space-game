@@ -1,5 +1,22 @@
 console.log('it works');
 
-let v: string;
+const backgroundCanvas = document.getElementById(
+  'background-canvas'
+) as HTMLCanvasElement;
+const backgroundContext = backgroundCanvas.getContext('2d');
 
-console.log(typeof v);
+const gameCanvas = document.getElementById('game-canvas') as HTMLCanvasElement;
+const gameContext = gameCanvas.getContext('2d');
+
+// draw background
+backgroundContext.fillStyle = '#000';
+backgroundContext.fillRect(
+  0,
+  0,
+  backgroundCanvas.height,
+  backgroundCanvas.width
+);
+
+// draw box
+gameContext.fillStyle = '#00ff00';
+gameContext.fillRect(200, 200, 100, 100);
