@@ -43,5 +43,7 @@ keyboardController.listen({
 });
 
 mouseController.listen({
+  rotateShipCounterClockwise: ccw,
+  rotateShipClockwise: cw,
   fireGun: fg
 });
