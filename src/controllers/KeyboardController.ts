@@ -27,7 +27,7 @@ class KeyboardController implements GameController {
   }
   listen(eventCallbacks: GameInputEvents): void {
     this.eventCallbacks = eventCallbacks;
-    window.addEventListener('keyup', event => {
+    window.addEventListener('keypress', event => {
       this.emit(event.key);
     });
   }
