@@ -7,13 +7,15 @@ export default class GameState {
     this.entities = [];
     const ship = new Ship({
       pos: {
-        x: 100,
-        y: 100
+        x: 1000,
+        y: 500
       },
       size: {
         height: 50,
         width: 50
-      }
+      },
+      angle: (7 * Math.PI) / 4,
+      vel: 1
     });
 
     this.entities.push(ship);

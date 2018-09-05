@@ -8,6 +8,11 @@ export default class Ship extends Entity {
     super(props);
   }
 
+  move() {
+    this.pos.x += this.vel * Math.cos(this.angle);
+    this.pos.y -= this.vel * Math.sin(this.angle);
+  }
+
   draw(renderingContext: CanvasRenderingContext2D): void {
     const { x, y } = this.pos;
     const { width, height } = this.size;

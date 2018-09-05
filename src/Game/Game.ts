@@ -7,7 +7,11 @@ export default class Game {
     private renderingContext: CanvasRenderingContext2D
   ) {}
 
-  update() {}
+  update() {
+    this.state.entities.forEach((entity: Entity) => {
+      entity.move();
+    });
+  }
 
   render() {
     this.clearRenderingContext();
@@ -22,6 +26,7 @@ export default class Game {
 
   step(timestamp: number) {
     this.render();
+    this.update();
     window.requestAnimationFrame(this.step.bind(this));
   }
 
