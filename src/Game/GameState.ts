@@ -1,7 +1,6 @@
 import Entity from './Entity';
 import Ship from './Entities/Ship';
 import Rock from './Entities/Rock';
-import { degToRad } from '../util/Math';
 
 export default class GameState {
   entities: Entity[];

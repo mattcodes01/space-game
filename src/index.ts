@@ -16,20 +16,6 @@ const mouseController: GameController = new MouseController({
   fireGun: 1
 });
 
-keyboardController.listen({
-  accelerate: ac,
-  decelerate: dc,
-  rotateShipCounterClockwise: ccw,
-  rotateShipClockwise: cw,
-  fireGun: fg
-});
-
-mouseController.listen({
-  rotateShipCounterClockwise: ccw,
-  rotateShipClockwise: cw,
-  fireGun: fg
-});
-
 const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
 const renderingContext = canvas.getContext('2d');
 
@@ -38,4 +24,3 @@ state.init();
 
 const game = new Game(state, renderingContext);
 game.start();
-

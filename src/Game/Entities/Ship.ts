@@ -1,6 +1,6 @@
 import Entity from '../Entity';
 import EntityProperties from '../../interfaces/EntityProperties';
-import { degToRad, radToDeg } from '../../util/Math';
+import { degToRad } from '../../util/Math';
 
 export default class Ship extends Entity {
   constructor(props: EntityProperties) {
