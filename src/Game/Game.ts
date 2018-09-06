@@ -25,8 +25,8 @@ export default class Game {
   }
 
   step(timestamp: number) {
-    this.render();
     this.update();
+    this.render();
     window.requestAnimationFrame(this.step.bind(this));
   }
 
