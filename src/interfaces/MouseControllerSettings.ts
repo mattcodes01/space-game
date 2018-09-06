@@ -1,0 +1,3 @@
+interface MouseControllerSettings {
+  fireGun: number;
+}
