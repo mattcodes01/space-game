@@ -6,4 +6,5 @@ export default interface EntityProperties {
   size: Dimension;
   angle: number;
   vel: number;
+  color?: string;
 }

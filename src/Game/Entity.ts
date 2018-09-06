@@ -8,12 +8,14 @@ export default class Entity implements Drawable {
   private _size: Dimension;
   private _angle: number;
   private _vel: number;
+  private _color: string;
 
   constructor(props: EntityProperties) {
     this._pos = props.pos;
     this._size = props.size;
     this._angle = props.angle;
     this._vel = props.vel;
+    this._color = props.color || '#fff';
   }
 
   draw(renderingContext: CanvasRenderingContext2D): void {}
@@ -42,5 +44,11 @@ export default class Entity implements Drawable {
   }
   set vel(newVel: number) {
     this._vel = newVel;
+  }
+  get color() {
+    return this._color;
+  }
+  set color(newColor: string) {
+    this._color = newColor;
   }
 }
