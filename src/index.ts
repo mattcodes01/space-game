@@ -1,27 +1,9 @@
-console.log('it works');
-
+import Game from './Game/Game';
+import GameState from './Game/GameState';
 import KeyboardController from './controllers/KeyboardController';
 import MouseController from './controllers/MouseController';
 
-const ccw = () => {
-  console.log('move ship counterclockwise');
-};
-
-const cw = () => {
-  console.log('move ship clockwise');
-};
-
-const ac = () => {
-  console.log('accelerate');
-};
-
-const dc = () => {
-  console.log('decelerate');
-};
-
-const fg = () => {
-  console.log('fire gun');
-};
+console.log('it works');
 
 const keyboardController: GameController = new KeyboardController({
   accelerate: 'w',
@@ -47,3 +29,13 @@ mouseController.listen({
   rotateShipClockwise: cw,
   fireGun: fg
 });
+
+const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
+const renderingContext = canvas.getContext('2d');
+
+const state = new GameState();
+state.init();
+
+const game = new Game(state, renderingContext);
+game.start();
+
