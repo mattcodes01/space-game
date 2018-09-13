@@ -24,7 +24,7 @@ export default class GameState {
         width: 50
       },
       angle: 0,
-      vel: 0,
+      vel: 2,
       color: '#fff'
     });
     const rock = new Rock({
