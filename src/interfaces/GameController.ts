@@ -1,3 +1,3 @@
 interface GameController {
-  listen(eventCallbacks: GameInputEvents): void;
+  listen(eventCallbacks?: GameInputEvents): void;
 }
