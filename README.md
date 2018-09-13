@@ -1,4 +1,4 @@
-#space-game
+# space-game
 
 npm install
 <br>
