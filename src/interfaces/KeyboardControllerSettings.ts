@@ -1,6 +1,6 @@
 interface KeyboardControllerSettings {
   accelerate: string;
   decelerate: string;
-  rotateShipClockWise: string;
+  rotateShipClockwise: string;
   rotateShipCounterClockwise: string;
 }
