@@ -8,7 +8,7 @@ console.log('it works');
 const keyboardController: GameController = new KeyboardController({
   accelerate: 'w',
   decelerate: 's',
-  rotateShipClockWise: 'd',
+  rotateShipClockwise: 'd',
   rotateShipCounterClockwise: 'a'
 });
 
@@ -19,7 +19,7 @@ const mouseController: GameController = new MouseController({
 const canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
 const renderingContext = canvas.getContext('2d');
 
-const state = new GameState();
+const state = new GameState(keyboardController, mouseController);
 state.init();
 
 const game = new Game(state, renderingContext);

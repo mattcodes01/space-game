@@ -7,6 +7,8 @@ export default class Game {
     private renderingContext: CanvasRenderingContext2D
   ) {}
 
+  init() {}
+
   update() {
     this.state.entities.forEach((entity: Entity) => {
       entity.move();
@@ -31,6 +33,7 @@ export default class Game {
   }
 
   start() {
+    this.init();
     window.requestAnimationFrame(this.step.bind(this));
   }
 }

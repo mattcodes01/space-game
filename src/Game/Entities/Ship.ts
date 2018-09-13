@@ -12,11 +12,11 @@ export default class Ship extends Entity {
     this.pos.y -= this.vel * Math.sin(this.angle);
   }
 
-  rotateLeft() {
+  rotateCounterClockwise() {
     this.angle += degToRad(5);
   }
 
-  rotateRight() {
+  rotateClockwise() {
     this.angle -= degToRad(5);
   }
 
