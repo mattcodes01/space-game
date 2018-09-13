@@ -4,10 +4,17 @@ import Rock from './Entities/Rock';
 
 export default class GameState {
   entities: Entity[];
+  ship: Ship;
+
+  constructor(
+    private keyboardController: GameController,
+    private mouseController: GameController
+  ) {}
 
   init() {
+    this.registerControllers();
     this.entities = [];
-    const ship = new Ship({
+    this.ship = new Ship({
       pos: {
         x: 1000,
         y: 500
@@ -17,7 +24,7 @@ export default class GameState {
         width: 50
       },
       angle: 0,
-      vel: 2,
+      vel: 0,
       color: '#fff'
     });
     const rock = new Rock({
@@ -33,7 +40,22 @@ export default class GameState {
       vel: 1
     });
 
-    this.entities.push(ship);
+    this.entities.push(this.ship);
     this.entities.push(rock);
+  }
+
+  registerControllers() {
+    this.keyboardController.listen();
+    this.mouseController.listen({
+      rotateShipClockwise: () => {
+        this.ship.rotateClockwise();
+      },
+      rotateShipCounterClockwise: () => {
+        this.ship.rotateCounterClockwise();
+      },
+      fireGun: () => {
+        console.log('fg');
+      }
+    });
   }
 }
