@@ -15,7 +15,7 @@ class KeyboardController implements GameController {
       case settings.decelerate:
         this.eventCallbacks.decelerate();
         break;
-      case settings.rotateShipClockWise:
+      case settings.rotateShipClockwise:
         this.eventCallbacks.rotateShipClockwise();
         break;
       case settings.rotateShipCounterClockwise:
