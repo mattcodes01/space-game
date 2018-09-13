@@ -8,7 +8,7 @@ console.log('it works');
 const keyboardController: GameController = new KeyboardController({
   accelerate: 'w',
   decelerate: 's',
-  rotateShipClockWise: 'd',
+  rotateShipClockwise: 'd',
   rotateShipCounterClockwise: 'a'
 });
 
